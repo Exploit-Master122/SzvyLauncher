@@ -45,6 +45,7 @@
       color: #ccc;
       font-size: 1.1em;
       margin-bottom: 30px;
+      padding: 0 20px;
     }
 
     .launch-btn {
@@ -74,7 +75,9 @@
 
   <div class="center" id="mainContent">
     <h1>Behold!! <span class="highlight">Szvy Central</span></h1>
-    <p>A simple web proxy, built for gaming.(This launcher is for Now.gg roblox,these days everyone plays it,so I made a launcher just for now.gg... Full HTML launcher by me,source code by Szvy!</p>
+    <p>
+      A simple web proxy, built for gaming. (This launcher is for Now.gg Roblox—these days everyone plays it, so I made a launcher just for now.gg... Full HTML launcher by me, source code by Szvy!)
+    </p>
     <button class="launch-btn" onclick="launchDarrkon()">Deploy Roblox</button>
   </div>
 
@@ -110,7 +113,8 @@
 
     const canvas = document.getElementById("stars");
     const ctx = canvas.getContext("2d");
-    let stars = [], numStars = 300;
+    let stars = [];
+    const numStars = 300;
 
     function resize() {
       canvas.width = window.innerWidth;
@@ -118,6 +122,16 @@
     }
 
     window.addEventListener("resize", resize);
+    resize();
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        radius: Math.random() * 1.5,
+        velocity: Math.random() * 0.5 + 0.2
+      });
+    }
 
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -135,10 +149,8 @@
       requestAnimationFrame(animate);
     }
 
-    for (let i = 0; i < numStars; i++) {
-      stars.push({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        radius: Math.random() * 1.5,
-        velocity: Math.random
+    animate();
+  </script>
+</body>
+</html>
 
