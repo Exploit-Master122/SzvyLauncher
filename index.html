@@ -67,66 +67,21 @@
       transform: scale(1.05);
       box-shadow: 0 0 30px #ff4c4c;
     }
-
-    #password-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: linear-gradient(to bottom right, #0b001f, #000);
-      padding: 40px;
-      border-radius: 16px;
-      z-index: 10;
-      box-shadow: 0 0 30px #ff4c4c80;
-      border: 1px solid #ff4c4c;
-    }
-
-    #password-container h2 {
-      margin-bottom: 20px;
-      color: #ff4c4c;
-      text-shadow: 0 0 20px #ff4c4c;
-    }
-
-    #password-container input {
-      padding: 12px;
-      font-size: 1em;
-      border: 1px solid #ff4c4c;
-      border-radius: 10px;
-      background: #060018;
-      color: #fff;
-      width: 250px;
-      text-align: center;
-      outline: none;
-      box-shadow: 0 0 15px #ff4c4c20;
-    }
-
-    #password-container button {
-      margin-top: 15px;
-      padding: 10px 24px;
-      font-size: 1em;
-      background: #ff4c4c;
-      color: #000;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      box-shadow: 0 0 25px #ff4c4c;
-    }
   </style>
+</head>
+<body>
+  <canvas id="stars"></canvas>
 
-  <canvas id="stars" style="display:none;"></canvas>
-
-  <div class="center" id="mainContent" style="display:none;">
+  <div class="center" id="mainContent">
     <h1>Behold!! <span class="highlight">Szvy Central</span></h1>
-    <p>An advanced web proxy,built for gaming and search.</p>
-    <button class="launch-btn" onclick="launchDarrkon()">Deploy</button>
+    <p>A simple web proxy, built for gaming.(This launcher is for Now.gg roblox,these days everyone plays it,so I made a launcher just for now.gg... Full HTML launcher by me,source code by Szvy!</p>
+    <button class="launch-btn" onclick="launchDarrkon()">Deploy Roblox</button>
   </div>
 
   <script>
     window.onbeforeunload = function () {
       return "Leave site? The teachers are trying to close this tab!";
     };
-
 
     function launchDarrkon() {
       const win = window.open();
@@ -146,7 +101,7 @@
               return "Leave site? Changes you made may not be saved.";
             };
           <\/script>
-          <iframe src="https://kahoot.com.de" allowfullscreen></iframe>
+          <iframe src="https://exploit-master122.github.io/DarrkonOS/" allowfullscreen></iframe>
         </body>
         </html>`;
       win.document.write(content);
@@ -185,18 +140,5 @@
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         radius: Math.random() * 1.5,
-        velocity: Math.random() * 0.3 + 0.1
-      });
-    }
+        velocity: Math.random
 
-    function startStars() {
-      resize();
-      animate();
-    }
-
-
-      }
-    });
-  </script>
-</body>
-</html>
